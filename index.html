@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EncryptoLab – Advanced Text Encryption & Decryption Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="libs/crypto-js.min.js"></script>
+  <script src="assets/crypto-explanations.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-shield-halved"></i> EncryptoLab</h1>
+    <p>Advanced Text Encryption & Decryption Tool</p>
+    <button id="theme-toggle" title="Toggle Light/Dark Mode"><i class="fa-solid fa-moon"></i></button>
+  </header>
+  <main>
+    <section id="encrypt-section" class="crypto-section">
+      <h2><span class="icon">🔐</span> Encrypt</h2>
+      <textarea id="encrypt-input" placeholder="Enter text to encrypt..."></textarea>
+      <div class="controls">
+        <select id="encrypt-algo">
+          <option value="caesar">Caesar Cipher</option>
+          <option value="vigenere">Vigenère Cipher</option>
+          <option value="vernam">Vernam Cipher</option>
+          <option value="hill">Hill Cipher</option>
+          <option value="monoalphabetic">Monoalphabetic Cipher</option>
+          <option value="polyalphabetic">Polyalphabetic Cipher</option>
+          <option value="playfair">Playfair Cipher</option>
+          <option value="aes">AES (CryptoJS)</option>
+          <option value="des">DES (CryptoJS)</option>
+        </select>
+        <input id="encrypt-key" type="text" placeholder="Key (if required)" style="display:none;">
+        <div id="encrypt-sample-key" class="sample-key" style="display:none;"></div>
+        <input id="encrypt-matrix" type="text" placeholder="Matrix (e.g. 3,3,2,5 for Hill)" style="display:none;">
+        <button id="encrypt-btn"><i class="fa-solid fa-lock"></i> Encrypt</button>
+        <button id="encrypt-example" title="Try Example"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+      </div>
+      <div class="output-box">
+        <textarea id="encrypt-output" readonly placeholder="Encrypted text will appear here..."></textarea>
+        <div class="output-actions">
+          <button id="encrypt-copy" title="Copy"><i class="fa-solid fa-copy"></i></button>
+          <button id="encrypt-download" title="Download as TXT"><i class="fa-solid fa-download"></i></button>
+        </div>
+        <button class="explain-toggle" id="encrypt-explain-toggle"><i class="fa-solid fa-book-open"></i> Show Steps/How it Works</button>
+        <div class="explanation" id="encrypt-explanation" style="display:none;"></div>
+      </div>
+    </section>
+    <hr class="divider">
+    <section id="decrypt-section" class="crypto-section">
+      <h2><span class="icon">🔓</span> Decrypt</h2>
+      <textarea id="decrypt-input" placeholder="Enter text to decrypt..."></textarea>
+      <div class="controls">
+        <select id="decrypt-algo">
+          <option value="caesar">Caesar Cipher</option>
+          <option value="vigenere">Vigenère Cipher</option>
+          <option value="vernam">Vernam Cipher</option>
+          <option value="hill">Hill Cipher</option>
+          <option value="monoalphabetic">Monoalphabetic Cipher</option>
+          <option value="polyalphabetic">Polyalphabetic Cipher</option>
+          <option value="playfair">Playfair Cipher</option>
+          <option value="aes">AES (CryptoJS)</option>
+          <option value="des">DES (CryptoJS)</option>
+        </select>
+        <input id="decrypt-key" type="text" placeholder="Key (if required)" style="display:none;">
+        <div id="decrypt-sample-key" class="sample-key" style="display:none;"></div>
+        <input id="decrypt-matrix" type="text" placeholder="Matrix (e.g. 3,3,2,5 for Hill)" style="display:none;">
+        <button id="decrypt-btn"><i class="fa-solid fa-unlock"></i> Decrypt</button>
+        <button id="decrypt-example" title="Try Example"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+      </div>
+      <div class="output-box">
+        <textarea id="decrypt-output" readonly placeholder="Decrypted text will appear here..."></textarea>
+        <div class="output-actions">
+          <button id="decrypt-copy" title="Copy"><i class="fa-solid fa-copy"></i></button>
+          <button id="decrypt-download" title="Download as TXT"><i class="fa-solid fa-download"></i></button>
+        </div>
+        <button class="explain-toggle" id="decrypt-explain-toggle"><i class="fa-solid fa-book-open"></i> Show Steps/How it Works</button>
+        <div class="explanation" id="decrypt-explanation" style="display:none;"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html> 

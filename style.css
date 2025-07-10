@@ -1,0 +1,206 @@
+/* Google Fonts */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+:root {
+  --bg: #f7f8fa;
+  --text: #222;
+  --primary: #3b82f6;
+  --secondary: #f59e42;
+  --box: #fff;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --border: #e5e7eb;
+}
+body.dark {
+  --bg: #181a1b;
+  --text: #f3f4f6;
+  --primary: #60a5fa;
+  --secondary: #fbbf24;
+  --box: #23272f;
+  --shadow: 0 4px 24px rgba(0,0,0,0.32);
+  --border: #374151;
+}
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  background: var(--box);
+  box-shadow: var(--shadow);
+  border-bottom: 1px solid var(--border);
+}
+header h1 {
+  font-family: 'Fira Code', monospace;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: 1px;
+}
+header p {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary);
+  transition: color 0.2s;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+}
+#theme-toggle:hover {
+  color: var(--secondary);
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.crypto-section {
+  background: var(--box);
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border: 1px solid var(--border);
+  position: relative;
+}
+.crypto-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.crypto-section .icon {
+  font-size: 1.3rem;
+}
+textarea {
+  width: 100%;
+  min-height: 80px;
+  border-radius: 0.7rem;
+  border: 1px solid var(--border);
+  padding: 0.8rem;
+  font-size: 1.1rem;
+  font-family: 'Fira Code', monospace;
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+  margin-bottom: 1rem;
+  transition: border 0.2s;
+}
+textarea:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+}
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+select, input[type="text"] {
+  border-radius: 0.7rem;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--text);
+  transition: border 0.2s;
+}
+select:focus, input[type="text"]:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+}
+button {
+  border: none;
+  border-radius: 0.7rem;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+button:hover, button:focus {
+  background: var(--secondary);
+  transform: translateY(-2px) scale(1.03);
+}
+.output-box {
+  background: var(--bg);
+  border-radius: 0.7rem;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  position: relative;
+}
+.output-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.explain-toggle {
+  margin-top: 1rem;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 0.95rem;
+}
+.explain-toggle:hover {
+  background: var(--primary);
+}
+.explanation {
+  margin-top: 1rem;
+  background: var(--box);
+  border-radius: 0.7rem;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  font-family: 'Fira Code', monospace;
+}
+.divider {
+  border: none;
+  border-top: 2px dashed var(--primary);
+  margin: 2.5rem 0;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  background: none;
+}
+footer {
+  text-align: center;
+  padding: 1.5rem 0 1rem 0;
+  color: var(--primary);
+  font-size: 1rem;
+  background: var(--box);
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+@media (max-width: 700px) {
+  main {
+    padding: 0 0.2rem;
+  }
+  .crypto-section {
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
+  }
+  .controls {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+} 
