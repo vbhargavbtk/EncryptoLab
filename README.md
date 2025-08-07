@@ -4,7 +4,7 @@
 
 A modern, interactive web application that implements multiple cryptographic algorithms for educational and practical use. EncryptoLab provides an intuitive interface for encrypting and decrypting text using both classical and modern ciphers.
 
-![EncryptoLab Demo](https://img.shields.io/badge/Status-Active-brightgreen) ![License](https://img.shields.io/badge/License-MIT-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)
+![EncryptoLab Demo](https://img.shields.io/badge/Status-Active-brightgreen) 
 
 ## ✨ Features
 
