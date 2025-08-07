@@ -158,26 +158,3 @@ Contributions are welcome! Here are some ways you can help:
 4. Test thoroughly
 5. Submit a pull request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **CryptoJS Team** for the robust encryption library
-- **Font Awesome** for the beautiful icons
-- **Google Fonts** for the typography
-- **Cryptography Community** for algorithm implementations and explanations
-
-## 📞 Support
-
-If you encounter any issues or have questions:
-1. Check the [Issues](../../issues) page
-2. Create a new issue with detailed information
-3. Include browser version and steps to reproduce
-
----
-
-**Made with ❤️ for the cryptography community**
-
-*Secure your text, understand the process* 🔐
